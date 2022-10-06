@@ -1,3 +1,122 @@
+:root{
+    --white: whitesmoke;
+    --light-white:white;
+    --light-blue: #73ace2;
+    --dark-blue: #568c8f;
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px;
+}
 * {
     font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    display: block;
+    background: url(../img/bg_02.png) repeat-x left -180px var(--light-blue);
+    text-align: center;
+    align-items: center;
+    height: 100%;
+    line-height: 1;
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--white);
+    border-radius: 8px;
+    height: 4vh;
+    background: var(--dark-blue);
+}
+a{
+    text-decoration: none;
+}
+.menu{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    list-style: none;
+    align-self: center;
+    padding: 0px;
+    margin: 0px;
+}
+.menu__li{
+    line-height: 0px;
+    margin-right: 24px;
+}
+.menu__li > a{
+    text-decoration: none;
+    color: white;
+}
+
+main{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    align-self: center;
+    width: 100%;
+    height: 85vh;
+}
+.main__title{
+    color: var(--dark-blue);
+    text-align: center;
+}
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.option{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    border: 1px solid var(--white);
+    border-radius: 8px;
+    background-color: rgba(238, 230, 230, 0.5);
+    height: 50%;
+    width: 32%;
+    margin: 40px;
+
+}
+.option__title{
+    font-size: var(--lg);
+    margin-bottom: 12px;
+    color: var(--dark-blue);
+}
+.option__description{
+    font-size: var(--md);
+    padding-top: 12px;
+    color: var(--light-blue);
+}
+.option__button{
+    font-size: var(--md);
+    height: 4vh;
+    width: 50%;
+    border: 4px solid var(--dark-blue);
+    border-radius: 8px;
+    background-color: var(--white);
+    justify-self: center;
+    margin-bottom: 5%;
+    cursor: pointer;
+    color: var(--dark-blue);
+}
+@media (max-width: 640px) {
+    .option {
+        height: 40%;
+    }
+    .option__title{
+        font-size: var(--md);
+    }
+    .option__description{
+        font-size: var(--sm);
+    }
+    .option__button{
+        font-size: var(--sm);
+    }
+}
+
+footer{
+    height: 5vh;
+    width: 100%;
 }
