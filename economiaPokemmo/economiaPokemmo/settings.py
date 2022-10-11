@@ -27,7 +27,8 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG',default=False,cast=bool)
 
-ALLOWED_HOSTS = []
+CSRF_TRUSTED_ORIGINS=['https://*.pokeasistente.ga']
+ALLOWED_HOSTS = ['pokeasistente.ga','www.pokeasistente.ga']
 
 
 # Application definition
@@ -78,12 +79,24 @@ WSGI_APPLICATION = 'economiaPokemmo.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if DEBUG != True:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': config('NAME'),
+            'USER': config('USER'),
+            'PASSWORD': config('PASSWORD'),
+            'HOST': config('HOST',default='localhost'),
+            'PORT': config('PORT',default=5432, cast=int),
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
 
 # Password validation
