@@ -7,4 +7,10 @@ def index(request):
     return render(request, 'index.html')
 
 def crianza(request):
-    return render (request,'crianza.html')
+
+    pokes=Pokemon.objects.all()
+    context={
+        'pokes': pokes,
+        'ivs': range(2,7),
+    }
+    return render (request,'crianza.html',context)

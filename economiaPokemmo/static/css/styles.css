@@ -19,8 +19,6 @@ body{
     line-height: 1;
     font: inherit;
     margin: 0;
-    padding: 0;
-    border: 0;
 }
 nav{
     display: flex;
@@ -101,6 +99,35 @@ section{
     cursor: pointer;
     color: var(--dark-blue);
 }
+
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 4%;
+}
+.form > label {
+    padding-bottom: 4px;
+    padding-top: 12px;
+    color: var(--light-blue);
+}
+.mi-selector{
+    width: 20%;
+    min-width: 8px;
+}
+#ivs{
+    width: 10%;
+    min-width: 24px;
+}
+.form__button{
+    margin-top: 4%;
+}
+#resultado {
+    color: var(--dark-blue);
+    font-size: var(--md);
+}
+
 @media (max-width: 640px) {
     .option {
         height: 40%;
@@ -117,6 +144,35 @@ section{
 }
 
 footer{
-    height: 5vh;
-    width: 100%;
+    position:fixed;
+    height:10%;
+    width:100%;
+    color: var(--white);
+    padding-bottom: 2%;
+    bottom: 0;
+    background-color: rgba(216, 226, 235, 0.373);
+}
+.footer_container{
+    display: flex;
+    margin-bottom: 4%;
+    margin-left: 12%;
+    margin-right: 12%;
+}
+
+#nickname{
+    font-weight: bold;
+}
+.footer_right{
+    margin-left: auto;
+}
+.footer_right__description{
+    text-decoration: none;
+}
+#facebook {
+    max-height: 32px;
+    width: auto;
+}
+#linkedin{
+    max-height: 32px;
+    width: auto;
 }
