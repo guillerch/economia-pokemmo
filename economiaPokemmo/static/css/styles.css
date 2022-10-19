@@ -15,7 +15,7 @@ body{
     background: url(../img/bg_02.png) repeat-x left -180px var(--light-blue);
     text-align: center;
     align-items: center;
-    height: 100%;
+    height: auto;
     line-height: 1;
     font: inherit;
     margin: 0;
@@ -72,7 +72,7 @@ section{
     border: 1px solid var(--white);
     border-radius: 8px;
     background-color: rgba(238, 230, 230, 0.5);
-    height: 50%;
+    height: auto;
     width: 32%;
     margin: 40px;
 
@@ -99,7 +99,9 @@ section{
     cursor: pointer;
     color: var(--dark-blue);
 }
-
+.breed{
+    align-self: center;
+}
 .form{
     display: flex;
     align-items: center;
@@ -112,14 +114,13 @@ section{
     padding-top: 12px;
     color: var(--light-blue);
 }
-.mi-selector{
-    width: 20%;
-    min-width: 8px;
+.form > input{
+    width: 30%;
+    border-radius: 4px;
+    border-color: 1px solid var(--light-white);
 }
-#ivs{
-    width: 10%;
-    min-width: 24px;
-}
+
+
 .form__button{
     margin-top: 4%;
 }
@@ -128,27 +129,11 @@ section{
     font-size: var(--md);
 }
 
-@media (max-width: 640px) {
-    .option {
-        height: 40%;
-    }
-    .option__title{
-        font-size: var(--md);
-    }
-    .option__description{
-        font-size: var(--sm);
-    }
-    .option__button{
-        font-size: var(--sm);
-    }
-}
-
 footer{
     position:fixed;
-    height:10%;
+    height:12%;
     width:100%;
     color: var(--white);
-    padding-bottom: 2%;
     bottom: 0;
     background-color: rgba(216, 226, 235, 0.373);
 }
@@ -175,4 +160,33 @@ footer{
 #linkedin{
     max-height: 32px;
     width: auto;
+}
+
+@media (max-width: 640px) {
+    .option {
+        max-width: 80%;
+        font-size: 80%;
+    }
+    .option__title{
+        font-size: 100%
+    }
+    .option__description{
+        font-size: 92%;
+    }
+    .form__label{
+        font-size: 88%;
+    }
+    .option__button{
+        width: auto;
+        font-size: 72%;
+    }
+    footer{
+        font-size: 84%;
+    }
+    #facebook{
+        max-height: 20px;
+    }
+    #linkedin{
+        max-height: 20px;
+    }
 }

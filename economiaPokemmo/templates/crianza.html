@@ -6,24 +6,26 @@
 {% endblock head %}
 
 {% block content %}
-<section>
-    <article class="option form-container">
-        <h3 class="option__title form-title">Crianza</h3>
-        <p class="option__description form-description">
-            Selecciona todas las caracteristicas que necesitas.
-        </p>
-        <form method="GET" action="/" class="form">
-            <label for="ivs">Cuantos ivs quieres x31?</label>
-            <input type="text" class="ivs">
-            
-            <label for="precio">Cual es el precio promedio de los pokemons?</label>
-            <input type="text" class="precio">
+<main>
+    <section>
+        <article class="option form-container">
+            <h3 class="option__title form-title">Crianza</h3>
+            <p class="option__description form-description">
+                Selecciona todas las caracteristicas que necesitas.
+            </p>
+            <form method="GET" action="/" class="form">
+                <label for="ivs" class="form__label">Cuantos ivs quieres x31?</label>
+                <input type="text" class="ivs">
+                
+                <label for="precio" class="form__label">Cual es el precio promedio de los pokemons?</label>
+                <input type="text" class="precio">
 
-            <button type="button" class="option__button form__button">Calcular!</button>
-            <p id="resultado"></p>
-        </form>
-    </article>
-</section>
+                <button type="button" class="option__button form__button">Calcular!</button>
+                <p id="resultado"></p>
+            </form>
+        </article>
+    </section>
+</main>
 {% endblock content %}
 
 {% block script %}
