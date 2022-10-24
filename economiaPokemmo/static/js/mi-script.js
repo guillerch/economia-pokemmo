@@ -1,10 +1,3 @@
-$(document).ready(function () {
-    $('.mi-selector').select2();
-    $('.mi-selector').select2({
-        language: "es"
-      });
-});
-
 const ivs = document.querySelector('.ivs');
 const precio = document.querySelector('.precio');
 const resultado = document.querySelector('#resultado')
