@@ -9,6 +9,7 @@ class Baya(models.Model):
     seed1 = models.CharField('Semilla 1', max_length=255)
     seed2 = models.CharField('Semilla 2', max_length=255)
     seed3 = models.CharField('Semilla 3', max_length=255,default="")
+    imagen=models.ImageField(default='null',verbose_name='Imagen',upload_to='berrys')
 
     class Meta:
         verbose_name='Baya'

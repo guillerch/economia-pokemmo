@@ -14,8 +14,8 @@
                 {% if baya.time == tiempo %}
                 <div class="berry-item">
                     <h4 class="berry-item__tittle">{{baya.name}}</h4>
+                    <img class="berry-item__image" src="{{baya.imagen.url}}">
                     <p class="berry-item__description">{{baya.description}}</p>
-                    <p class="berry-item__time">tiempo de cultivo: <spam class="high-light">{{baya.time}}</spam></p>
                     <p class="berry-item__seed">
                         semillas:
                         {{baya.seed1}},

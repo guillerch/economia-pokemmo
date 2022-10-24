@@ -20,6 +20,7 @@ body{
     text-align: center;
     height: 88%;
     margin: 0;
+    margin-bottom: 10%;
 }
 nav{
     display: flex;
@@ -79,7 +80,7 @@ section{
     border-radius: 8px;
     background-color: rgba(238, 230, 230, 0.5);
     width: 50%;
-    height: 80%;
+    height: auto;
     margin-left: 20px;
     margin-top: 12px;
 
@@ -147,15 +148,35 @@ section{
     height: auto;
     margin-left: 20px;
     margin-top: 12px;
-    overflow: hidden;
+    margin-bottom: 12%;
+    color: var(--dark-blue);
+    font-size: 100%;
+}
+.berry-container{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+.berry-item{
+    border: 1px solid var(--light-white);
+    border-radius: 4px;
+    width: auto;
+    font-size: 80%;
+    margin-right: 0.5%;
+}
+.berry-item__image{
+    width: 12%;
 }
 
 /* footer */
 footer{
     position: fixed;
     bottom: 0;
+    left: 0;
     width: 100%;
-    height: 12%;
+    height: 10%;
     color: var(--white);
     background-color: rgba(216, 226, 235, 0.373);
 }
@@ -164,6 +185,7 @@ footer{
     padding-top: 0;
     margin-left: 12%;
     margin-right: 12%;
+    padding-bottom: 0;
 }
 .high-light{
     font-weight: bold;
@@ -183,7 +205,7 @@ footer{
     width: auto;
 }
 /* estilos de movil */
-@media (max-width: 640px) {
+@media (max-width: 1280px) {
     .option {
         max-width: 80%;
         font-size: 80%;
@@ -209,5 +231,8 @@ footer{
     }
     #linkedin{
         max-height: 20px;
+    }
+    .berry-item__image{
+        width: 20%;
     }
 }
