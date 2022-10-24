@@ -154,22 +154,38 @@ section{
 }
 .berry-container{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-content: center;
     justify-content: center;
     margin-bottom: 8px;
 }
 .berry-item{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items: center;
+    align-content: center;
     border: 1px solid var(--light-white);
     border-radius: 4px;
-    width: auto;
+    height: auto;
     font-size: 80%;
     margin-right: 0.5%;
 }
-.berry-item__image{
-    width: 12%;
+.berry-item__tittle{
+    width: 16%;
 }
-
+.berry-item__image{
+    width: 28px;
+}
+.berry-item__description{
+    width: 40%;
+}
+.berry-item__seed{
+    width: 24%;
+}
+.divisor{
+    border-right: 1px solid var(--white);
+}
 /* footer */
 footer{
     position: fixed;
@@ -231,8 +247,5 @@ footer{
     }
     #linkedin{
         max-height: 20px;
-    }
-    .berry-item__image{
-        width: 20%;
     }
 }
