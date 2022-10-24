@@ -170,6 +170,7 @@ section{
     height: auto;
     font-size: 80%;
     margin-right: 0.5%;
+    margin-bottom: 4px;
 }
 .berry-item__tittle{
     width: 16%;
