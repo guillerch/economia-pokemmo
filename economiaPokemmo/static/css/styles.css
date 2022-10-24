@@ -200,27 +200,29 @@ footer{
 }
 .footer_container{
     display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
     padding-top: 0;
     margin-left: 12%;
     margin-right: 12%;
-    padding-bottom: 0;
 }
 .high-light{
     font-weight: bold;
 }
 .footer_right{
     margin-left: auto;
+    margin-bottom: 4%;
 }
 .footer_right__description{
-    text-decoration: none;
+    height: 40px;
 }
-#facebook {
-    max-height: 32px;
-    width: auto;
+.icons{
+    width: 24px;
 }
-#linkedin{
-    max-height: 32px;
-    width: auto;
+.footer_left{
+    height: auto;
+    margin-bottom: 12%;
 }
 /* estilos de movil */
 @media (max-width: 1280px) {
@@ -242,12 +244,6 @@ footer{
         font-size: 72%;
     }
     footer{
-        font-size: 84%;
-    }
-    #facebook{
-        max-height: 20px;
-    }
-    #linkedin{
-        max-height: 20px;
+        font-size: 68%;
     }
 }
