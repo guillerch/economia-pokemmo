@@ -8,7 +8,7 @@
     flex-direction: column;
     justify-self: center;
     margin-top: mixinsfunc.pixels-rem(16);
-    margin-bottom: mixinsfunc.pixels-rem(130);
+    margin-bottom: mixinsfunc.pixels-rem(140);
     width: 80vw;
 
     @media (min-width:764px) {
@@ -35,22 +35,22 @@
         border: 1px solid vars.$white;
         border-radius: 4px;
         margin-top: mixinsfunc.pixels-rem(2);
-        height: auto;
+        height: 10vh;
 
         &--title{
             @include mixinsfunc.title;
             font-size: mixinsfunc.pixels-rem(16);
-            width: 16%;
+            width: 8vw;
         }
         &--image{
             width: mixinsfunc.pixels-rem(24);
         }
         &--description{
             @include mixinsfunc.description;
-            width: 40%;
+            width: 30vw;
         }
         &--seed{
-            width: 24%;
+            width: 24vw;
             @include mixinsfunc.description;
         }
     }
