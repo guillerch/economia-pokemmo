@@ -1,0 +1,11 @@
+@use 'partials/reset';
+@use 'partials/layout';
+@use 'partials/nav';
+@use 'partials/index';
+@use 'partials/breed';
+@use 'partials/berry';
+@use 'partials/footer';
+
+.high-light{
+    font-weight: bold;
+}

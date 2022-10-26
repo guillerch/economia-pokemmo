@@ -1,7 +1,7 @@
-const ivs = document.querySelector('.ivs');
-const precio = document.querySelector('.precio');
-const resultado = document.querySelector('#resultado')
-const btn=document.querySelector('.form__button');
+const ivs = document.querySelector('#ivs');
+const precio = document.querySelector('#precio');
+const resultado = document.querySelector('.breed__form--result');
+const btn=document.querySelector('.breed__form--button');
 
 btn.addEventListener('click',calculo)
 

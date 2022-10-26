@@ -1,0 +1,7 @@
+@use 'mixinsfunc';
+@use 'vars';
+
+body{
+    background: url(/static/img/bg_02.png) repeat-x left -180px vars.$light-blue;
+    text-align: center;
+}

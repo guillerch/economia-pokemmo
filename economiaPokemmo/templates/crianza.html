@@ -5,25 +5,23 @@
 {% endblock head %}
 
 {% block content %}
-<main>
-    <section>
-        <article class="option form-container">
-            <h3 class="option__title form-title">Crianza</h3>
-            <p class="option__description form-description">
-                Selecciona todas las caracteristicas que necesitas.
-            </p>
-            <form method="GET" action="/" class="form">
-                <label for="ivs" class="form__label">Cuantos ivs quieres x31?</label>
-                <input type="text" class="ivs" placeholder="ej: 6">
-                
-                <label for="precio" class="form__label">Cual es el precio promedio de los pokemons?</label>
-                <input type="text" class="precio" placeholder="ej: 5000">
+<main class="breed">
+    <section class="breed__container">
+        <h3 class="breed__container--title">Crianza</h3>
+        <p class="breed__container--description">
+            Selecciona todas las caracteristicas que necesitas.
+        </p>
+        <form method="GET" action="/" class="breed__form">
+            <label for="breed__form--ivs" class="breed__form--label">Cuantos ivs quieres x31?</label>
+            <input type="text" class="breed__form--input" id="ivs" placeholder="ej: 6">
+            
+            <label for="breed__form--input" class="breed__form--label">Cual es el precio promedio de los pokemons?</label>
+            <input type="text" class="breed__form--input" id=precio placeholder="ej: 5000">
 
-                <button type="button" class="option__button form__button">Calcular!</button>
-                <p id="resultado"></p>
-            </form>
-        </article>
-    </section>
+            <button type="button" class="breed__form--button">Calcular!</button>
+            <p class="breed__form--result"></p>
+        </form>
+    <section>
 </main>
 {% endblock content %}
 

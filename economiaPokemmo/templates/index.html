@@ -1,26 +1,26 @@
 {% extends 'layout.html' %}
 {% block head %} <title>Bienvenidos|Poke Asistente</title> {% endblock head %}
 {% block content %}
-    <main>
+    <main class="main">
         <h2 class="main__title">Bienvenido a Poke Asistente</h2>
-        <section>
-            <article class="option">
-                <h3 class="option__title">Quieres criar?</h3>
-                <p class="option__description">
-                    Aqui puedes ver lo que necesitas para criar tu pokemon ideal y ayuda con todo lo necesario para hacerte un criador experto sin morir en el intento!
+        <section class="option">
+            <article class="option__item">
+                <h3 class="option__item--title">Quieres saber cuanto cuesta criar?</h3>
+                <p class="option__item--description">
+                    Aqui puedes ver cuanto necesitas para criar tu pokemon ideal y ayuda con todo lo necesario para ser un criador experto!
                 </p>
                     <a href="{% url 'crianza' %}">
-                        <button class="option__button">Vamos!</button>
+                        <button class="option__item--button">Vamos!</button>
                     </a>
             </article>
 
-            <article class="option">
-                <h3 class="option__title">Quieres información sobre bayas?</h3>
-                <p class="option__description">
+            <article class="option__item right-item">
+                <h3 class="option__item--title">Quieres info para plantar bayas?</h3>
+                <p class="option__item--description">
                     En este lugar tendras toda la información necesaria para empezar a mejorar tu economía sin miedo a fallar!
                 </p>
                     <a href="{% url 'bayas' %}">
-                        <button class="option__button">Ver info!</button>
+                        <button class="option__item--button">Ver info!</button>
                     </a>
             </article>
     </section>

@@ -1,0 +1,56 @@
+@use 'mixinsfunc';
+@use 'vars';
+
+.breed{
+    @include mixinsfunc.flexbox(center);
+
+    &__container{
+        @include mixinsfunc.flexbox(center);
+        flex-direction: column;
+        margin-top: mixinsfunc.pixels-rem(16);
+        background-color: vars.$transparent;
+        border: 1px solid vars.$white;
+        border-radius: 4px;
+        width: mixinsfunc.pixels-rem(450);
+        height: mixinsfunc.pixels-rem(300);
+
+        &--title{
+            color: vars.$dark-blue;
+            font-size: mixinsfunc.pixels-rem(24);
+            font-weight: bold;
+            padding-bottom: mixinsfunc.pixels-rem(8);
+        }
+        &--description{
+            color: vars.$light-blue;
+            font-size: mixinsfunc.pixels-rem(20);
+            padding-bottom: mixinsfunc.pixels-rem(8);
+        }
+    }
+
+    &__form{
+        @include mixinsfunc.flexbox(center);
+        flex-direction: column;
+        
+        &--label{
+            color: vars.$dark-blue;
+            font-weight: bold;
+            font-size: mixinsfunc.pixels-rem(16);
+            padding-bottom: mixinsfunc.pixels-rem(8);
+        }
+        &--input{
+            border: 2px solid vars.$dark-blue;
+            border-radius: 4px;
+            margin-bottom: mixinsfunc.pixels-rem(8);
+        }
+        &--button{
+            position: relative;
+            cursor: pointer;
+            border: 4px solid vars.$dark-blue;
+            border-radius: 8px;
+            background-color: vars.$white;
+            color: vars.$dark-blue;
+            font-size: mixinsfunc.pixels-rem(14);
+            margin-top: mixinsfunc.pixels-rem(28);
+        }
+    }
+}
