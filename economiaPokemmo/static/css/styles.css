@@ -54,7 +54,7 @@ body {
   flex-direction: column;
   background: url(/static/img/bg_02.png) repeat-x left -180px #73ace2;
   text-align: center;
-  width: 96vh;
+  width: 96vw;
 }
 
 .desk-menu {
