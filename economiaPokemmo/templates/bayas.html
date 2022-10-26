@@ -1,35 +1,37 @@
 {% extends 'layout.html' %}
 {% block head %} <title>Bayas|Poke Asistente</title> {% endblock head %}
 {% block content %}
-<section>
-    <article class=" berry">
-        <h3 class="berry__title">Bayas</h3>
-        <p class="berry__description">
-            Aqui encontraras toda la información necesaria para entrar en el mundo del <spam class="high-light">pokecultivo<spam>
-        </p>
-        {% for tiempo in tiempos %}
-        <h3 class="berry-time__title">Bayas de {{tiempo}} horas</h3>
-        <div class="berry-container">
+<main class=" berry">
+    <h3 class="berry__title">Bayas</h3>
+    <p class="berry__description">
+    Aqui encontraras toda la información necesaria para entrar en el mundo del <spam class="high-light">pokecultivo<spam>
+    </p>
+    {% for tiempo in tiempos %}
+        <h3 class="berry__time">Bayas de {{tiempo}} horas</h3>
+        <div class="berry__container">
             {% for baya in bayas %}
                 {% if baya.time == tiempo %}
-                <div class="berry-item">
-                    <h4 class="berry-item__tittle">{{baya.name}}</h4>
-                    <spam class="divisor"></spam>
-                    <img class="berry-item__image" src="{{baya.imagen.url}}">
-                    <spam class="divisor"></spam>
-                    <p class="berry-item__description">{{baya.description}}</p>
-                    <spam class="divisor"></spam>
-                    <p class="berry-item__seed">
+                    <article class="berry__item">
+                        <h4 class="berry__item--title">{{baya.name}}</h4>
+                        <spam class="divisor"></spam>
+                        <img class="berry__item--image" src="{{baya.imagen.url}}">
+                        <spam class="divisor"></spam>
+                        <p class="berry__item--description">{{baya.description}}</p>
+                        <spam class="divisor"></spam>
+                        <p class="berry__item--seed">
                         semillas:
                         {{baya.seed1}},
+                        {% if baya.seed3 != "NN" %}
                         {{baya.seed2}},
                         {{baya.seed3}}
-                    </p>
-                </div>
+                        {% else %}
+                        {{baya.seed2}}
+                        {% endif %}
+                        </p>
+                    </article>
                 {% endif %}
             {% endfor %}
         </div>
-{% endfor %}
-    </article>
-</section>
+    {% endfor %}
+</main>
 {% endblock content %}

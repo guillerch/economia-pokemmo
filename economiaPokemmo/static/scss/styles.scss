@@ -1,0 +1,16 @@
+@use 'partials/reset';
+@use 'partials/layout';
+@use 'partials/nav';
+@use 'partials/index';
+@use 'partials/breed';
+@use 'partials/berry';
+@use 'partials/footer';
+@use 'partials/mixinsfunc';
+
+.high-light{
+    font-weight: bold;
+}
+.divisor{
+    margin-right: mixinsfunc.pixels-rem(0.5);
+    margin-left: mixinsfunc.pixels-rem(0.5);
+}

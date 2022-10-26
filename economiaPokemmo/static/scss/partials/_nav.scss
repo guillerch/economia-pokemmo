@@ -1,0 +1,35 @@
+@use 'mixinsfunc';
+@use 'vars';
+
+.desk-menu{
+    @include mixinsfunc.flexbox(center);
+    border: 1px solid vars.$white;
+    border-radius: 8px;
+    background: vars.$dark-blue;
+    width: 100vw;
+    height: 6vh;
+
+    &__ul{
+        @include mixinsfunc.flexbox(center);
+        flex-direction: row;
+        align-self: center;
+
+        &--li{
+            padding: 1rem;
+            margin-right: 1rem;
+            
+            &__link{
+                color: white;
+                font-size: mixinsfunc.pixels-rem(16);
+
+                &:hover{
+                    transition: 400ms;
+                    font-size: mixinsfunc.pixels-rem(28);
+                }
+                @media (min-width:764px) {
+                    font-size: mixinsfunc.pixels-rem(24);
+                }
+            }
+        }
+    }
+}

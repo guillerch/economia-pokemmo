@@ -1,0 +1,57 @@
+@use 'mixinsfunc';
+@use 'vars';
+
+.berry{
+    @include mixinsfunc.flexbox(center);
+    @include mixinsfunc.container;
+    align-content: center;
+    flex-direction: column;
+    justify-self: center;
+    margin-top: mixinsfunc.pixels-rem(16);
+    margin-bottom: mixinsfunc.pixels-rem(130);
+    width: 80vw;
+
+    @media (min-width:764px) {
+        width: 72vw;
+    }
+    @media (max-width:281px) {
+        width: 100vw;
+    }
+
+    &__title{
+        @include mixinsfunc.title;
+    }
+    &__description{
+        @include mixinsfunc.description;
+    }
+    &__container{
+        margin-bottom: mixinsfunc.pixels-rem(8);
+    }
+    &__time{
+        @include mixinsfunc.title;
+    }
+    &__item{
+        @include mixinsfunc.flexbox(flex-start);
+        border: 1px solid vars.$white;
+        border-radius: 4px;
+        margin-top: mixinsfunc.pixels-rem(2);
+        height: auto;
+
+        &--title{
+            @include mixinsfunc.title;
+            font-size: mixinsfunc.pixels-rem(16);
+            width: 16%;
+        }
+        &--image{
+            width: mixinsfunc.pixels-rem(24);
+        }
+        &--description{
+            @include mixinsfunc.description;
+            width: 40%;
+        }
+        &--seed{
+            width: 24%;
+            @include mixinsfunc.description;
+        }
+    }
+}
