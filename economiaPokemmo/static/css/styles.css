@@ -54,6 +54,7 @@ body {
   flex-direction: column;
   background: url(/static/img/bg_02.png) repeat-x left -180px #73ace2;
   text-align: center;
+  width: 96vh;
 }
 
 .desk-menu {
@@ -236,7 +237,7 @@ body {
   flex-direction: column;
   justify-self: center;
   margin-top: 1rem;
-  margin-bottom: 8.125rem;
+  margin-bottom: 8.75rem;
   width: 80vw;
 }
 @media (min-width: 764px) {
@@ -276,7 +277,7 @@ body {
   border: 1px solid whitesmoke;
   border-radius: 4px;
   margin-top: 0.125rem;
-  height: auto;
+  height: 10vh;
 }
 .berry__item--title {
   color: #568c8f;
@@ -284,7 +285,7 @@ body {
   font-weight: bold;
   padding-bottom: 0.5rem;
   font-size: 1rem;
-  width: 16%;
+  width: 8vw;
 }
 .berry__item--image {
   width: 1.5rem;
@@ -293,10 +294,10 @@ body {
   color: #73ace2;
   font-size: 1.25rem;
   padding-bottom: 0.5rem;
-  width: 40%;
+  width: 30vw;
 }
 .berry__item--seed {
-  width: 24%;
+  width: 24vw;
   color: #73ace2;
   font-size: 1.25rem;
   padding-bottom: 0.5rem;
