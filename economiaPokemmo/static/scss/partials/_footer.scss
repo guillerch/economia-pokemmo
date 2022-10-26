@@ -7,6 +7,8 @@
     bottom: 0;
     left: 0;
     color: vars.$white;
+    height: 14vh;
+    background-color: rgba(216, 226, 235, 0.373);
 
     &_container{
         @include mixinsfunc.flexbox(center);

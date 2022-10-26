@@ -19,12 +19,10 @@
 
     &__item{
         @include mixinsfunc.flexbox(center);
+        @include mixinsfunc.container;
         flex-direction: column;
 
-        background-color: vars.$transparent;
         padding: mixinsfunc.pixels-rem(12);
-        border: 1px solid vars.$white;
-        border-radius: 4px;
         height: mixinsfunc.pixels-rem(280);
         width: mixinsfunc.pixels-rem(150);
 

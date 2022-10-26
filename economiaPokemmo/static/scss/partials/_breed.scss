@@ -6,24 +6,21 @@
 
     &__container{
         @include mixinsfunc.flexbox(center);
+        @include mixinsfunc.container;
         flex-direction: column;
         margin-top: mixinsfunc.pixels-rem(16);
-        background-color: vars.$transparent;
-        border: 1px solid vars.$white;
-        border-radius: 4px;
-        width: mixinsfunc.pixels-rem(450);
+        width: 70vw;
         height: mixinsfunc.pixels-rem(300);
 
         &--title{
-            color: vars.$dark-blue;
-            font-size: mixinsfunc.pixels-rem(24);
-            font-weight: bold;
-            padding-bottom: mixinsfunc.pixels-rem(8);
+            @include mixinsfunc.title;
         }
         &--description{
-            color: vars.$light-blue;
-            font-size: mixinsfunc.pixels-rem(20);
-            padding-bottom: mixinsfunc.pixels-rem(8);
+            @include mixinsfunc.description;
+        }
+        @media (min-width:764px) {
+            width: 30vw;
+            
         }
     }
 
@@ -51,6 +48,11 @@
             color: vars.$dark-blue;
             font-size: mixinsfunc.pixels-rem(14);
             margin-top: mixinsfunc.pixels-rem(28);
+        }
+        &--result{
+            margin-top: mixinsfunc.pixels-rem(12);
+            color: vars.$dark-blue;
+            font-size: mixinsfunc.pixels-rem(18);
         }
     }
 }

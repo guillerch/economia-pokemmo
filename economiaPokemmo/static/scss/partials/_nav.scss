@@ -2,9 +2,12 @@
 @use 'vars';
 
 .desk-menu{
+    @include mixinsfunc.flexbox(center);
     border: 1px solid vars.$white;
     border-radius: 8px;
     background: vars.$dark-blue;
+    width: 100vw;
+    height: 6vh;
 
     &__ul{
         @include mixinsfunc.flexbox(center);

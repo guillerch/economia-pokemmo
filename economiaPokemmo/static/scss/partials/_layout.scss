@@ -2,6 +2,8 @@
 @use 'vars';
 
 body{
+    @include mixinsfunc.flexbox(center);
+    flex-direction: column;
     background: url(/static/img/bg_02.png) repeat-x left -180px vars.$light-blue;
     text-align: center;
 }
