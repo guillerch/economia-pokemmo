@@ -63,7 +63,7 @@ body {
 }
 @media (min-width: 1024px) {
   body {
-    width: 100vw;
+    width: 98vw;
   }
 }
 
@@ -421,7 +421,7 @@ body {
 }
 @media (min-width: 764px) {
   .berry__table {
-    width: 44vw;
+    width: 38vw;
   }
 }
 .berry__table--header {
@@ -494,7 +494,7 @@ body {
 }
 @media (min-width: 764px) {
   .berry__table--item-image {
-    width: 2rem;
+    width: 2.375rem;
   }
 }
 

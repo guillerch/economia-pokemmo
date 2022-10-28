@@ -45,7 +45,7 @@
             width: 72vw;
         }
         @media (min-width:764px){
-            width: 44vw;
+            width: 38vw;
         }
         
         &--header{
@@ -107,7 +107,7 @@
             }
             @media (min-width:764px){
                 &-image{
-                    width: mixinsfunc.pixels-rem(32);
+                    width: mixinsfunc.pixels-rem(38);
                 }
             }
         }
