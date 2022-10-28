@@ -52,21 +52,30 @@
             @include mixinsfunc.title;
             font-size: mixinsfunc.pixels-rem(16);
             border-radius: 4px;
+            height: 2vh;
 
             &-title{
                 border-right: 1px solid white;
                 border-bottom: 1px solid vars.$white;
+                vertical-align: middle;
+                padding: mixinsfunc.pixels-rem(2);
             }
             &-image{
                 border-right: 1px solid white;
                 border-bottom: 1px solid vars.$white;
+                vertical-align: middle;
+                padding: mixinsfunc.pixels-rem(2);
             }
             &-description{
                 border-right: 1px solid white;
                 border-bottom: 1px solid vars.$white;
+                vertical-align: middle;
+                padding: mixinsfunc.pixels-rem(2);
             }
             &-seed{
                 border-bottom: 1px solid vars.$white;
+                vertical-align: middle;
+                padding: mixinsfunc.pixels-rem(2);
             }
             @media (max-width:280px) {
                 font-size: mixinsfunc.pixels-rem(14);
@@ -82,9 +91,11 @@
                 padding-right: 1vw;
                 padding-left: 1vw;
                 border-right: 1px solid white;
+                vertical-align: middle;
             }
             &-image{
                 text-align: center;
+                vertical-align: middle;
                 &_item{
                     width: mixinsfunc.pixels-rem(36);
                 }
@@ -94,10 +105,12 @@
                 font-size: mixinsfunc.pixels-rem(16);
                 border-right: 1px solid white;
                 border-left: 1px solid white;
+                vertical-align: middle;
             }
             &-seed{
                 @include mixinsfunc.description;
                 font-size: mixinsfunc.pixels-rem(16);
+                vertical-align: middle;
             }
             @media (max-width:281px) {
                 &-description{

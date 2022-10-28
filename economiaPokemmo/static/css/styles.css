@@ -431,21 +431,30 @@ body {
   padding-bottom: 0.5rem;
   font-size: 1rem;
   border-radius: 4px;
+  height: 2vh;
 }
 .berry__table--header-title {
   border-right: 1px solid white;
   border-bottom: 1px solid whitesmoke;
+  vertical-align: middle;
+  padding: 0.125rem;
 }
 .berry__table--header-image {
   border-right: 1px solid white;
   border-bottom: 1px solid whitesmoke;
+  vertical-align: middle;
+  padding: 0.125rem;
 }
 .berry__table--header-description {
   border-right: 1px solid white;
   border-bottom: 1px solid whitesmoke;
+  vertical-align: middle;
+  padding: 0.125rem;
 }
 .berry__table--header-seed {
   border-bottom: 1px solid whitesmoke;
+  vertical-align: middle;
+  padding: 0.125rem;
 }
 @media (max-width: 280px) {
   .berry__table--header {
@@ -465,9 +474,11 @@ body {
   padding-right: 1vw;
   padding-left: 1vw;
   border-right: 1px solid white;
+  vertical-align: middle;
 }
 .berry__table--item-image {
   text-align: center;
+  vertical-align: middle;
 }
 .berry__table--item-image_item {
   width: 2.25rem;
@@ -479,12 +490,14 @@ body {
   font-size: 1rem;
   border-right: 1px solid white;
   border-left: 1px solid white;
+  vertical-align: middle;
 }
 .berry__table--item-seed {
   color: #568c8f;
   font-size: 1.25rem;
   padding-bottom: 0.5rem;
   font-size: 1rem;
+  vertical-align: middle;
 }
 @media (max-width: 281px) {
   .berry__table--item-description {
