@@ -84,8 +84,10 @@
                 border-right: 1px solid white;
             }
             &-image{
-                width: mixinsfunc.pixels-rem(24);
-                padding-right: 1vw;
+                text-align: center;
+                &_item{
+                    width: mixinsfunc.pixels-rem(36);
+                }
             }
             &-description{
                 @include mixinsfunc.description;

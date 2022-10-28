@@ -467,8 +467,10 @@ body {
   border-right: 1px solid white;
 }
 .berry__table--item-image {
-  width: 1.5rem;
-  padding-right: 1vw;
+  text-align: center;
+}
+.berry__table--item-image_item {
+  width: 2.25rem;
 }
 .berry__table--item-description {
   color: #568c8f;

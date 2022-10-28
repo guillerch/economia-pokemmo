@@ -19,7 +19,9 @@
                 {% if baya.time == tiempo %}
                     <tr class="berry__table--item">
                         <td class="berry__table--item-title">{{baya.name}}</td>
-                        <td><img class="berry__table--item-image" src="{{baya.imagen.url}}"></td>
+                        <td class="berry__table--item-image">
+                            <img class="berry__table--item-image_item" src="{{baya.imagen.url}}">
+                        </td>
                         <td class="berry__table--item-description">{{baya.description}}</td>
                         <td class="berry__table--item-seed">
                             <ul>
