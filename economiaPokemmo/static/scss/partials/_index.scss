@@ -4,13 +4,26 @@
 .main{
     @include mixinsfunc.flexbox(center);
     flex-direction: column;
+    margin-top: mixinsfunc.pixels-rem(88);
+    width: 100vw;
 
     &__title{
         padding-top: mixinsfunc.pixels-rem(16);
-        color: vars.$light-white;
+        color: vars.$white;
         font-size: mixinsfunc.pixels-rem(24);
         font-weight: bold;
     }
+    @media (min-width:764px) {
+        &__title{
+            font-size: mixinsfunc.pixels-rem(32);
+        }
+    }
+    @media (min-width:911px) {
+        &__title{
+            font-size: mixinsfunc.pixels-rem(40);
+        }
+    }
+
 }
 .option{
     @include mixinsfunc.flexbox(center);
@@ -49,19 +62,47 @@
             margin-top: mixinsfunc.pixels-rem(28);
         }
         @media (min-width: 764px) {
-            height: mixinsfunc.pixels-rem(200);
-            width: mixinsfunc.pixels-rem(300);
+            height: 24vh;
+            width: 40vw;
 
             &--title{
-                font-size: mixinsfunc.pixels-rem(20);
+                font-size: mixinsfunc.pixels-rem(24);
             }
             &--description{
-                font-size: mixinsfunc.pixels-rem(18);
+                font-size: mixinsfunc.pixels-rem(20);
+            }
+            &--button{
+                font-size: mixinsfunc.pixels-rem(20);
             }
         }
+        @media (min-width: 911px) {
+
+            &--title{
+                font-size: mixinsfunc.pixels-rem(28);
+            }
+            &--description{
+                font-size: mixinsfunc.pixels-rem(24);
+            }
+            &--button{
+                font-size: mixinsfunc.pixels-rem(24);
+            }
+        }
+        @media (min-width: 1024px) {
+            height: 48vh;
+            width: 40vw;
+            }
+
+        @media (min-width: 1280px) {
+            height: 36vh;
+            width: 32vw;
+            }
+    }
+    @media (max-width:280px) {
+        padding-left: 0;
+        padding-right: 0;
     }
     
 }
 .right-item{
-    margin-left: mixinsfunc.pixels-rem(20);
+    margin-left: mixinsfunc.pixels-rem(8);
 }

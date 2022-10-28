@@ -19,7 +19,7 @@
     padding-bottom: #{pixels-rem(8)};
 }
 @mixin description{
-    color: vars.$light-blue;
+    color: vars.$dark-blue;
     font-size: #{pixels-rem(20)};
     padding-bottom: #{pixels-rem(8)};
 }

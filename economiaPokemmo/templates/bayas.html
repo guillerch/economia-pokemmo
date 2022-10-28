@@ -8,30 +8,34 @@
     </p>
     {% for tiempo in tiempos %}
         <h3 class="berry__time">Bayas de {{tiempo}} horas</h3>
-        <div class="berry__container">
+        <table class="berry__table">
+            <tr class="berry__table--header">
+                <th scope="col" class="berry__table--header-title">Nombre</td>
+                <th scope="col" class="berry__table--header-image">Icono</td>
+                <th scope="col" class="berry__table--header-description">Descripción</td>
+                <th scope="col" class="berry__table--header-seed">Semillas</td>
+            </tr>
             {% for baya in bayas %}
                 {% if baya.time == tiempo %}
-                    <article class="berry__item">
-                        <h4 class="berry__item--title">{{baya.name}}</h4>
-                        <spam class="divisor"></spam>
-                        <img class="berry__item--image" src="{{baya.imagen.url}}">
-                        <spam class="divisor"></spam>
-                        <p class="berry__item--description">{{baya.description}}</p>
-                        <spam class="divisor"></spam>
-                        <p class="berry__item--seed">
-                        semillas:
-                        {{baya.seed1}},
-                        {% if baya.seed3 != "NN" %}
-                        {{baya.seed2}},
-                        {{baya.seed3}}
-                        {% else %}
-                        {{baya.seed2}}
-                        {% endif %}
-                        </p>
-                    </article>
+                    <tr class="berry__table--item">
+                        <td class="berry__table--item-title">{{baya.name}}</td>
+                        <td><img class="berry__table--item-image" src="{{baya.imagen.url}}"></td>
+                        <td class="berry__table--item-description">{{baya.description}}</td>
+                        <td class="berry__table--item-seed">
+                            <ul>
+                                <li>{{baya.seed1}},</li>
+                                {% if baya.seed3 != "NN" %}
+                                <li>{{baya.seed2}},</li>
+                                    <li>{{baya.seed3}}</li>
+                                {% else %}
+                                <li>{{baya.seed2}}</li>
+                                {% endif %}
+                            </ul>
+                        </td>
+                    </tr>
                 {% endif %}
             {% endfor %}
-        </div>
+        </table>
     {% endfor %}
 </main>
 {% endblock content %}

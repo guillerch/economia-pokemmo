@@ -3,55 +3,113 @@
 
 .berry{
     @include mixinsfunc.flexbox(center);
-    @include mixinsfunc.container;
-    align-content: center;
     flex-direction: column;
-    justify-self: center;
-    margin-top: mixinsfunc.pixels-rem(16);
-    margin-bottom: mixinsfunc.pixels-rem(140);
-    width: 80vw;
+    margin-top: mixinsfunc.pixels-rem(88);
+    background-color: vars.$transparent;
+    margin-bottom: mixinsfunc.pixels-rem(136);
+    padding-top: mixinsfunc.pixels-rem(12);
+    padding-bottom: mixinsfunc.pixels-rem(12);
+    width: 100vw;
+    border: 1px solid vars.$white;
+    border-radius: 4px;
 
-    @media (min-width:764px) {
-        width: 72vw;
+    @media (min-width:539px){
+        width: 80vw;
     }
-    @media (max-width:281px) {
-        width: 100vw;
+    @media (min-width:764px){
+        width: 52vw;
     }
 
     &__title{
         @include mixinsfunc.title;
+        font-size: mixinsfunc.pixels-rem(20);
     }
     &__description{
         @include mixinsfunc.description;
-    }
-    &__container{
-        margin-bottom: mixinsfunc.pixels-rem(8);
+        font-size: mixinsfunc.pixels-rem(18);
     }
     &__time{
         @include mixinsfunc.title;
+        font-size: mixinsfunc.pixels-rem(18);
+        padding: mixinsfunc.pixels-rem(12);
     }
-    &__item{
-        @include mixinsfunc.flexbox(flex-start);
+    &__table{
+        @include mixinsfunc.flexbox(center);
+        justify-content: flex-start;
+        align-content: center;
         border: 1px solid vars.$white;
         border-radius: 4px;
-        margin-top: mixinsfunc.pixels-rem(2);
-        height: 10vh;
+        width: 96vw;
 
-        &--title{
+        @media (min-width:539px){
+            width: 72vw;
+        }
+        @media (min-width:764px){
+            width: 44vw;
+        }
+        
+        &--header{
             @include mixinsfunc.title;
             font-size: mixinsfunc.pixels-rem(16);
-            width: 8vw;
+            border-radius: 4px;
+
+            &-title{
+                border-right: 1px solid white;
+                border-bottom: 1px solid vars.$white;
+            }
+            &-image{
+                border-right: 1px solid white;
+                border-bottom: 1px solid vars.$white;
+            }
+            &-description{
+                border-right: 1px solid white;
+                border-bottom: 1px solid vars.$white;
+            }
+            &-seed{
+                border-bottom: 1px solid vars.$white;
+            }
+            @media (max-width:280px) {
+                font-size: mixinsfunc.pixels-rem(14);
+
+            }
         }
-        &--image{
-            width: mixinsfunc.pixels-rem(24);
-        }
-        &--description{
-            @include mixinsfunc.description;
-            width: 30vw;
-        }
-        &--seed{
-            width: 24vw;
-            @include mixinsfunc.description;
+        &--item{
+            border-radius: 4px;
+            border-bottom: 1px solid vars.$white;
+            &-title{
+                @include mixinsfunc.title;
+                font-size: mixinsfunc.pixels-rem(14);
+                padding-right: 1vw;
+                padding-left: 1vw;
+                border-right: 1px solid white;
+            }
+            &-image{
+                width: mixinsfunc.pixels-rem(24);
+                padding-right: 1vw;
+            }
+            &-description{
+                @include mixinsfunc.description;
+                font-size: mixinsfunc.pixels-rem(16);
+                border-right: 1px solid white;
+                border-left: 1px solid white;
+            }
+            &-seed{
+                @include mixinsfunc.description;
+                font-size: mixinsfunc.pixels-rem(16);
+            }
+            @media (max-width:281px) {
+                &-description{
+                    font-size: mixinsfunc.pixels-rem(12);
+                }
+                &-seed{
+                    font-size: mixinsfunc.pixels-rem(12);
+                }
+            }
+            @media (min-width:764px){
+                &-image{
+                    width: mixinsfunc.pixels-rem(32);
+                }
+            }
         }
     }
 }

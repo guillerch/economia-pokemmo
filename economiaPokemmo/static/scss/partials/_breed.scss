@@ -3,14 +3,15 @@
 
 .breed{
     @include mixinsfunc.flexbox(center);
+    margin-top: mixinsfunc.pixels-rem(88);
 
     &__container{
         @include mixinsfunc.flexbox(center);
         @include mixinsfunc.container;
         flex-direction: column;
         margin-top: mixinsfunc.pixels-rem(16);
-        width: 70vw;
-        height: mixinsfunc.pixels-rem(300);
+        width: 60vw;
+        height: 56vh;
 
         &--title{
             @include mixinsfunc.title;
@@ -19,8 +20,26 @@
             @include mixinsfunc.description;
         }
         @media (min-width:764px) {
-            width: 30vw;
-            
+            width: 60vw;
+            height: 40vh;
+
+            &--title{
+                font-size: mixinsfunc.pixels-rem(32);
+            }
+            &--description{
+                font-size: mixinsfunc.pixels-rem(28);
+            }
+        }
+        @media (min-width:1023px) {
+            width: 60vw;
+            height: 64vh;
+
+            &--title{
+                font-size: mixinsfunc.pixels-rem(28);
+            }
+            &--description{
+                font-size: mixinsfunc.pixels-rem(28);
+            }
         }
     }
 
@@ -38,6 +57,9 @@
             border: 2px solid vars.$dark-blue;
             border-radius: 4px;
             margin-bottom: mixinsfunc.pixels-rem(8);
+            width: 16vw;
+            font-size: mixinsfunc.pixels-rem(14);
+
         }
         &--button{
             position: relative;
@@ -53,6 +75,63 @@
             margin-top: mixinsfunc.pixels-rem(12);
             color: vars.$dark-blue;
             font-size: mixinsfunc.pixels-rem(18);
+        }
+        @media (max-width:280px) {
+            &--label{
+                font-size: mixinsfunc.pixels-rem(16);
+            }
+            &--input{
+                font-size: mixinsfunc.pixels-rem(12);
+                width: 20vw;
+            }
+            &--button{
+                font-size: mixinsfunc.pixels-rem(12);
+            }
+            &--result{
+                font-size: mixinsfunc.pixels-rem(16);
+            }
+        }
+        @media (min-width:764px) {
+            &--label{
+                font-size: mixinsfunc.pixels-rem(24);
+            }
+            &--input{
+                font-size: mixinsfunc.pixels-rem(18);
+            }
+            &--button{
+                font-size: mixinsfunc.pixels-rem(20);
+            }
+            &--result{
+                font-size: mixinsfunc.pixels-rem(24);
+            }
+        }
+        @media (min-width:911px) {
+            &--label{
+                font-size: mixinsfunc.pixels-rem(32);
+            }
+            &--input{
+                font-size: mixinsfunc.pixels-rem(24);
+            }
+            &--button{
+                font-size: mixinsfunc.pixels-rem(28);
+            }
+            &--result{
+                font-size: mixinsfunc.pixels-rem(32);
+            }
+        }
+        @media (min-width:1023px) {
+            &--label{
+                font-size: mixinsfunc.pixels-rem(28);
+            }
+            &--input{
+                font-size: mixinsfunc.pixels-rem(24);
+            }
+            &--button{
+                font-size: mixinsfunc.pixels-rem(24);
+            }
+            &--result{
+                font-size: mixinsfunc.pixels-rem(28);
+            }
         }
     }
 }
