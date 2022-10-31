@@ -23,12 +23,12 @@
     height: auto;
 
     &__title{
-        font-size: mixinsfunc.pixels-rem(20);
+        font-size: mixinsfunc.pixels-rem(18);
         font-weight: bold;
     }
     &__description{
         margin-top: mixinsfunc.pixels-rem(20);
-        font-size: mixinsfunc.pixels-rem(16);
+        font-size: mixinsfunc.pixels-rem(14);
     }
     @media (min-width:764px) {
         &__title{
@@ -39,6 +39,27 @@
         }
     }
 }
+
+.footer_mid{
+    @include mixinsfunc.flexbox(center);
+    flex-direction: column;
+    height: auto;
+    margin-left: auto;
+    &--link{
+        color: vars.$white;
+        margin-bottom: mixinsfunc.pixels-rem(12);
+        font-size: mixinsfunc.pixels-rem(12);
+        @media (min-width:764px) {
+            font-size: mixinsfunc.pixels-rem(18);
+
+            &:hover{
+                font-size: mixinsfunc.pixels-rem(20);
+                transition: 300ms;
+            }
+        }
+    }
+}
+
 .footer_right{
     margin-left: auto;
 

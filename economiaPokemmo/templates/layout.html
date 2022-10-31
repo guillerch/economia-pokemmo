@@ -14,7 +14,6 @@
     {% endblock head %}
     <link href= "{% static 'css/styles.css' %}" rel="stylesheet" type="text/css" />
     <link rel="shortcut icon" href="{% static 'img/icono.ico' %}" type="image/x-icon" />
-    
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-49QFYSGDJD"></script>
@@ -56,6 +55,15 @@
                 <p class="footer_left__description"> mi nick en el juego es: <spam class="high-light">GuillerCH</spam></p>
             </div>
 
+            <div class="footer_mid">
+                <a href="{% url 'politicas' %}" class="footer_mid--link" title="Política de Privacidad">
+                    Política de Privacidad
+                </a>
+                <a href="{% url 'terminos' %}" class="footer_mid--link" title="Terminos y condiciones">
+                    Terminos y condiciones
+                </a>
+            </div>
+
             <div class="footer_right">
                 <h3 class="footer_right__title">Sigueme!</h3>
                 <p class="footer_right__description">
@@ -70,7 +78,6 @@
                         </a>
                 </p>
             </div>
-
     </section>
     </footer>
     

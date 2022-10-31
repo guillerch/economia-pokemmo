@@ -1,0 +1,21 @@
+@use 'mixinsfunc';
+@use 'vars';
+
+.rules{
+    align-items: center;
+    margin-top: mixinsfunc.pixels-rem(88);
+    margin-bottom: mixinsfunc.pixels-rem(130);
+    padding-bottom: mixinsfunc.pixels-rem(12);
+    color: vars.$dark-blue;
+    background-color: vars.$transparent;
+    border: 1px solid vars.$white;
+    width: 98vw;
+    @media (min-width:819px) {
+        width: 80vw;
+    }
+
+    &__title{
+        @include mixinsfunc.title;
+
+    }
+}

@@ -6,6 +6,11 @@ from .models import Pokemon
 def index(request):
     return render(request, 'index.html')
 
+def politicas(request):
+    return render(request, 'politicas.html')
+def terminos(request):
+    return render(request, 'terminos.html')
+
 def crianza(request):
 
     pokes=Pokemon.objects.all()
