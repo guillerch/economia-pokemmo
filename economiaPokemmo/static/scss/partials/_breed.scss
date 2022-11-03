@@ -3,25 +3,32 @@
 
 .breed{
     @include mixinsfunc.flexbox(center);
-    margin-top: mixinsfunc.pixels-rem(88);
+    margin-top: mixinsfunc.pixels-rem(48);
+    @media (min-width:764px) {
+        margin-top: mixinsfunc.pixels-rem(88);
+    }
 
     &__container{
         @include mixinsfunc.flexbox(center);
+        justify-content: flex-start;
         @include mixinsfunc.container;
         flex-direction: column;
         margin-top: mixinsfunc.pixels-rem(16);
         width: 60vw;
-        height: 56vh;
+        padding-bottom: mixinsfunc.pixels-rem(20);
 
         &--title{
             @include mixinsfunc.title;
+            padding: mixinsfunc.pixels-rem(12);
         }
         &--description{
             @include mixinsfunc.description;
         }
+        @media (max-width:280px) {
+            width: 100vw;
+        }
         @media (min-width:764px) {
             width: 60vw;
-            height: 40vh;
 
             &--title{
                 font-size: mixinsfunc.pixels-rem(32);
@@ -31,15 +38,19 @@
             }
         }
         @media (min-width:1023px) {
-            width: 60vw;
-            height: 64vh;
+            width: 30vw;
+            margin-top: mixinsfunc.pixels-rem(-30);
+            margin-bottom: mixinsfunc.pixels-rem(120);
 
             &--title{
-                font-size: mixinsfunc.pixels-rem(28);
+                font-size: mixinsfunc.pixels-rem(24);
             }
             &--description{
-                font-size: mixinsfunc.pixels-rem(28);
+                font-size: mixinsfunc.pixels-rem(18);
             }
+        }
+        @media (min-width:1279px){
+            margin-top: mixinsfunc.pixels-rem(20);
         }
     }
 
@@ -61,6 +72,11 @@
             font-size: mixinsfunc.pixels-rem(14);
 
         }
+        &--select{
+            color: vars.$dark-blue;
+            border: 1px solid vars.$dark-blue;
+            border-radius: 4px;
+        }
         &--button{
             position: relative;
             cursor: pointer;
@@ -70,11 +86,6 @@
             color: vars.$dark-blue;
             font-size: mixinsfunc.pixels-rem(14);
             margin-top: mixinsfunc.pixels-rem(28);
-        }
-        &--result{
-            margin-top: mixinsfunc.pixels-rem(12);
-            color: vars.$dark-blue;
-            font-size: mixinsfunc.pixels-rem(18);
         }
         @media (max-width:280px) {
             &--label{
@@ -121,16 +132,46 @@
         }
         @media (min-width:1023px) {
             &--label{
-                font-size: mixinsfunc.pixels-rem(28);
+                font-size: mixinsfunc.pixels-rem(18);
             }
             &--input{
-                font-size: mixinsfunc.pixels-rem(24);
+                font-size: mixinsfunc.pixels-rem(18);
             }
             &--button{
-                font-size: mixinsfunc.pixels-rem(24);
+                font-size: mixinsfunc.pixels-rem(18);
             }
             &--result{
-                font-size: mixinsfunc.pixels-rem(28);
+                font-size: mixinsfunc.pixels-rem(20);
+            }
+        }
+    }
+    &__table{
+        margin-top: mixinsfunc.pixels-rem(10);
+        color: vars.$dark-blue;
+        border: 1px solid vars.$white;
+        &--header{
+            font-size: mixinsfunc.pixels-rem(16);
+            &-item{
+                padding: mixinsfunc.pixels-rem(4);
+                font-weight: bold;
+                border-right: 1px solid vars.$white;
+                border-bottom: 1px solid vars.$white;
+            }
+        }
+        &--item{
+            font-size: mixinsfunc.pixels-rem(14);
+            &_name{
+                font-weight: bold;
+                border-right: 1px solid vars.$white;
+                border-bottom: 1px solid vars.$white;
+                padding: 2px;
+            }
+            &_units{
+                border-right: 1px solid vars.$white;
+                border-bottom: 1px solid vars.$white;
+            }
+            &_cost{
+                border-bottom: 1px solid vars.$white;
             }
         }
     }

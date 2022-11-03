@@ -213,35 +213,46 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 5.5rem;
+  margin-top: 3rem;
+}
+@media (min-width: 764px) {
+  .breed {
+    margin-top: 5.5rem;
+  }
 }
 .breed__container {
   display: flex;
   align-items: center;
   justify-content: center;
+  justify-content: flex-start;
   background-color: rgba(238, 230, 230, 0.5);
   border: 1px solid whitesmoke;
   border-radius: 4px;
   flex-direction: column;
   margin-top: 1rem;
   width: 60vw;
-  height: 56vh;
+  padding-bottom: 1.25rem;
 }
 .breed__container--title {
   color: #568c8f;
   font-size: 1.5rem;
   font-weight: bold;
   padding-bottom: 0.5rem;
+  padding: 0.75rem;
 }
 .breed__container--description {
   color: #568c8f;
   font-size: 1.25rem;
   padding-bottom: 0.5rem;
 }
+@media (max-width: 280px) {
+  .breed__container {
+    width: 100vw;
+  }
+}
 @media (min-width: 764px) {
   .breed__container {
     width: 60vw;
-    height: 40vh;
   }
   .breed__container--title {
     font-size: 2rem;
@@ -252,14 +263,20 @@ body {
 }
 @media (min-width: 1023px) {
   .breed__container {
-    width: 60vw;
-    height: 64vh;
+    width: 30vw;
+    margin-top: -1.875rem;
+    margin-bottom: 7.5rem;
   }
   .breed__container--title {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
   .breed__container--description {
-    font-size: 1.75rem;
+    font-size: 1.125rem;
+  }
+}
+@media (min-width: 1279px) {
+  .breed__container {
+    margin-top: 1.25rem;
   }
 }
 .breed__form {
@@ -281,6 +298,11 @@ body {
   width: 16vw;
   font-size: 0.875rem;
 }
+.breed__form--select {
+  color: #568c8f;
+  border: 1px solid #568c8f;
+  border-radius: 4px;
+}
 .breed__form--button {
   position: relative;
   cursor: pointer;
@@ -290,11 +312,6 @@ body {
   color: #568c8f;
   font-size: 0.875rem;
   margin-top: 1.75rem;
-}
-.breed__form--result {
-  margin-top: 0.75rem;
-  color: #568c8f;
-  font-size: 1.125rem;
 }
 @media (max-width: 280px) {
   .breed__form--label {
@@ -341,17 +358,47 @@ body {
 }
 @media (min-width: 1023px) {
   .breed__form--label {
-    font-size: 1.75rem;
+    font-size: 1.125rem;
   }
   .breed__form--input {
-    font-size: 1.5rem;
+    font-size: 1.125rem;
   }
   .breed__form--button {
-    font-size: 1.5rem;
+    font-size: 1.125rem;
   }
   .breed__form--result {
-    font-size: 1.75rem;
+    font-size: 1.25rem;
   }
+}
+.breed__table {
+  margin-top: 0.625rem;
+  color: #568c8f;
+  border: 1px solid whitesmoke;
+}
+.breed__table--header {
+  font-size: 1rem;
+}
+.breed__table--header-item {
+  padding: 0.25rem;
+  font-weight: bold;
+  border-right: 1px solid whitesmoke;
+  border-bottom: 1px solid whitesmoke;
+}
+.breed__table--item {
+  font-size: 0.875rem;
+}
+.breed__table--item_name {
+  font-weight: bold;
+  border-right: 1px solid whitesmoke;
+  border-bottom: 1px solid whitesmoke;
+  padding: 2px;
+}
+.breed__table--item_units {
+  border-right: 1px solid whitesmoke;
+  border-bottom: 1px solid whitesmoke;
+}
+.breed__table--item_cost {
+  border-bottom: 1px solid whitesmoke;
 }
 
 .berry {

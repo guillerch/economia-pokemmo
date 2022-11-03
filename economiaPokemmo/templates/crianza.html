@@ -12,16 +12,55 @@
         <p class="breed__container--description">
             Selecciona todas las caracteristicas que necesitas.
         </p>
-        <form method="GET" action="/" class="breed__form">
+        <form method="POST" action="/" class="breed__form">
             <label for="breed__form--ivs" class="breed__form--label">Cuantos ivs quieres x31?</label>
             <input type="text" class="breed__form--input" id="ivs" placeholder="ej: 6">
             
             <label for="breed__form--input" class="breed__form--label">Cual es el precio promedio de los pokemons?</label>
             <input type="text" class="breed__form--input" id=precio placeholder="ej: 5000">
 
+            <label for="breed__form--input" class="breed__form--label">Es un Pokemon inicial o fosil?</label>
+            <select class="breed__form--select" id="rarity">
+                <option value="0">No</option>
+                <option value="1">Si</option>
+            </select>
+
             <button type="button" class="breed__form--button">Calcular!</button>
-            <p class="breed__form--result"></p>
         </form>
+        <table class="breed__table">
+            <tbody class="breed__table--container">
+                <tr class="breed__table--header">
+                    <th class="breed__table--header-item">Nombre</th>
+                    <th class="breed__table--header-item">Cantidad</th>
+                    <th class="breed__table--header-item">Costo</th>
+                </tr>
+
+                <tr class="breed__table--item">
+                    <th class="breed__table--item_name">Padres</th>
+                    <th class="breed__table--item_units cPokes">0</th>
+                    <th class="breed__table--item_cost pPokes">0</th>
+                </tr>
+                <tr class="breed__table--item">
+                    <th class="breed__table--item_name">Crianza</th>
+                    <th class="breed__table--item_units cBreed">0</th>
+                    <th class="breed__table--item_cost pBreed">0</th>
+                </tr>
+                <tr class="breed__table--item">
+                    <th class="breed__table--item_name">Brazaletes</th>
+                    <th class="breed__table--item_units cBra">0</th>
+                    <th class="breed__table--item_cost pBra">0</th>
+                </tr>
+                <tr class="breed__table--item">
+                    <th class="breed__table--item_name">Pokebolas</th>
+                    <th class="breed__table--item_units cBall">0</th>
+                    <th class="breed__table--item_cost pBall">0</th>
+                </tr>
+                <tr class="breed__table--item">
+                    <th class="breed__table--item_name">Gasto total</th>
+                    <th class="breed__table--item_cost pTotal"colspan="2">0</th>
+                </tr>
+        </tbody>
+        </table>
     <section>
 </main>
 {% endblock content %}
