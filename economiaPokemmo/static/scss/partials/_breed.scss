@@ -7,6 +7,7 @@
 
     &__container{
         @include mixinsfunc.flexbox(center);
+        justify-content: flex-start;
         @include mixinsfunc.container;
         flex-direction: column;
         margin-top: mixinsfunc.pixels-rem(16);
@@ -15,6 +16,7 @@
 
         &--title{
             @include mixinsfunc.title;
+            padding: mixinsfunc.pixels-rem(12);
         }
         &--description{
             @include mixinsfunc.description;
@@ -31,14 +33,14 @@
             }
         }
         @media (min-width:1023px) {
-            width: 60vw;
+            width: 30vw;
             height: 64vh;
 
             &--title{
-                font-size: mixinsfunc.pixels-rem(28);
+                font-size: mixinsfunc.pixels-rem(24);
             }
             &--description{
-                font-size: mixinsfunc.pixels-rem(28);
+                font-size: mixinsfunc.pixels-rem(18);
             }
         }
     }
@@ -121,16 +123,16 @@
         }
         @media (min-width:1023px) {
             &--label{
-                font-size: mixinsfunc.pixels-rem(28);
+                font-size: mixinsfunc.pixels-rem(18);
             }
             &--input{
-                font-size: mixinsfunc.pixels-rem(24);
+                font-size: mixinsfunc.pixels-rem(18);
             }
             &--button{
-                font-size: mixinsfunc.pixels-rem(24);
+                font-size: mixinsfunc.pixels-rem(18);
             }
             &--result{
-                font-size: mixinsfunc.pixels-rem(28);
+                font-size: mixinsfunc.pixels-rem(20);
             }
         }
     }

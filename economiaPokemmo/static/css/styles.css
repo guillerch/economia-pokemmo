@@ -219,6 +219,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  justify-content: flex-start;
   background-color: rgba(238, 230, 230, 0.5);
   border: 1px solid whitesmoke;
   border-radius: 4px;
@@ -232,6 +233,7 @@ body {
   font-size: 1.5rem;
   font-weight: bold;
   padding-bottom: 0.5rem;
+  padding: 0.75rem;
 }
 .breed__container--description {
   color: #568c8f;
@@ -252,14 +254,14 @@ body {
 }
 @media (min-width: 1023px) {
   .breed__container {
-    width: 60vw;
+    width: 30vw;
     height: 64vh;
   }
   .breed__container--title {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
   .breed__container--description {
-    font-size: 1.75rem;
+    font-size: 1.125rem;
   }
 }
 .breed__form {
@@ -341,16 +343,16 @@ body {
 }
 @media (min-width: 1023px) {
   .breed__form--label {
-    font-size: 1.75rem;
+    font-size: 1.125rem;
   }
   .breed__form--input {
-    font-size: 1.5rem;
+    font-size: 1.125rem;
   }
   .breed__form--button {
-    font-size: 1.5rem;
+    font-size: 1.125rem;
   }
   .breed__form--result {
-    font-size: 1.75rem;
+    font-size: 1.25rem;
   }
 }
 

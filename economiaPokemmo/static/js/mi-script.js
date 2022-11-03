@@ -1,22 +1,79 @@
+/* Selectores */
 const ivs = document.querySelector('#ivs');
 const precio = document.querySelector('#precio');
-const resultado = document.querySelector('.breed__form--result');
+
+const cPokes = document.querySelector('.cPokes')
+const pPokes = document.querySelector('.pPokes')
+
+const cBra = document.querySelector('.cBra')
+const pBra = document.querySelector('.pBra')
+
+const cBall = document.querySelector('.cBall')
+const pBall = document.querySelector('.pBall')
+
+const rarity = document.querySelector('#rarity')
+
+const pTotal = document.querySelector('.pTotal')
+
 const btn=document.querySelector('.breed__form--button');
 
-btn.addEventListener('click',calculo)
+/* Variables globales */
+const precio_cintas=10000;
+const precio_pokebolas=200;
 
+/* Funciones */
 function calculo() {
-  let precio_cintas=10000
-  let precio_pokebolas=200
+  let precio_base=parseInt(precio.value)
+  let ivs_base = parseInt(ivs.value)
 
-  let pokes_base=2**(ivs.value-1)
-  let cantidad_total=pokes_base*2
+  let pokes_base=2**(ivs_base-1);
+  let precioTotalPokes=precio_base*pokes_base;
+
+  let cantidad_total=pokes_base*2;
+
+  let cantidad_cintas=cantidad_total-2;
+  let precioTotalCintas=precio_cintas*cantidad_cintas;
+
+  let cantidad_pokebolas=cantidad_total-1;
+  let precioTotalPokebolas=precio_pokebolas*cantidad_pokebolas;
+  let rareza;
+  if (rarity.value > 0) {
+    rareza= (ivs_base-1)*21000;
+  }else{
+    rareza = 0;
+  }
+
   let total;
 
-  if (ivs.value>1) {
-    total=((precio_cintas*(cantidad_total-2))+(precio_pokebolas*(cantidad_total-1))+(precio.value*pokes_base))
-  } else {
-    total = precio.value
+  if (ivs.value>=1 && precio_base >=1){
+    total=precioTotalCintas+precioTotalPokebolas+precioTotalPokes+rareza;
+  }else {
+    pokes_base = 0;
+    precio_base = 0;
+    precioTotalPokes= 0;
+    cantidad_total = 0;
+    cantidad_cintas = 0;
+    precioTotalCintas = 0;
+    cantidad_pokebolas = 0;
+    precioTotalPokebolas = 0;
+    total=precioTotalCintas+precioTotalPokebolas+precioTotalPokes;
   }
-  resultado.innerText = "Costo total: "+ total
-}
+
+
+  cPokes.innerText = pokes_base;
+  pPokes.innerText = precioTotalPokes;
+
+  cBra.innerText = cantidad_cintas;
+  pBra.innerText = precioTotalCintas;
+
+  cBall.innerText = cantidad_pokebolas;
+  pBall.innerText = precioTotalPokebolas;
+
+  pTotal.innerText = total
+  console.log(ivs_base)
+  console.log(rareza)
+  console.log(rarity.value)
+};
+
+/*Acciones*/
+btn.addEventListener('click',calculo)
