@@ -7,6 +7,8 @@ const cBra = document.querySelector('.cBra')
 const pBra = document.querySelector('.pBra')
 const cBall = document.querySelector('.cBall')
 const pBall = document.querySelector('.pBall')
+const cBreed = document.querySelector('.cBreed')
+const pBreed =document.querySelector('.pBreed')
 const rarity = document.querySelector('#rarity')
 const pTotal = document.querySelector('.pTotal')
 const btn=document.querySelector('.breed__form--button');
@@ -24,12 +26,15 @@ function calculo() {
   let cantidad_total=pokes_base*2;
   let cantidad_cintas=cantidad_total-2;
   let precioTotalCintas=precio_cintas*cantidad_cintas;
+  let cantidad_breed=(pokes_base/2)
+  let precioTotalBreed=cantidad_breed*5000
   let cantidad_pokebolas=cantidad_total-1;
   let precioTotalPokebolas=precio_pokebolas*cantidad_pokebolas;
   let rareza;
   let total;
   if (rarity.value > 0) {
     rareza= (ivs_base-1)*21000;
+    precioTotalBreed= precioTotalBreed + rareza
   }else{
     rareza = 0;
   }
@@ -42,6 +47,8 @@ function calculo() {
     cantidad_total = 0;
     cantidad_cintas = 0;
     precioTotalCintas = 0;
+    cantidad_breed = 0;
+    precioTotalBreed = 0;
     cantidad_pokebolas = 0;
     precioTotalPokebolas = 0;
     total=precioTotalCintas+precioTotalPokebolas+precioTotalPokes;
@@ -50,6 +57,8 @@ function calculo() {
   pPokes.innerText = precioTotalPokes;
   cBra.innerText = cantidad_cintas;
   pBra.innerText = precioTotalCintas;
+  cBreed.innerText = cantidad_breed;
+  pBreed.innerText = precioTotalBreed;
   cBall.innerText = cantidad_pokebolas;
   pBall.innerText = precioTotalPokebolas;
   pTotal.innerText = total
