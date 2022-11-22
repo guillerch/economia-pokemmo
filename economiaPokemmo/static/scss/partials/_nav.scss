@@ -8,6 +8,7 @@
     left: 0;
     right: 0;
     height: 6vh;
+    z-index: 1;
 
     &__ul{
         @include mixinsfunc.flexbox(center);
