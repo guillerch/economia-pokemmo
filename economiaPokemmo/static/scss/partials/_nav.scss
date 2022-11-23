@@ -8,15 +8,16 @@
     left: 0;
     right: 0;
     height: 6vh;
+    width: 100vw;
+    z-index: 1;
 
     &__ul{
-        @include mixinsfunc.flexbox(center);
+        @include mixinsfunc.flexbox(space-between);
+        width: 60vw;
         flex-direction: row;
         align-self: center;
 
         &--li{
-            padding: 1rem;
-            margin-right: 1rem;
             
             &__link{
                 color: white;
@@ -30,6 +31,15 @@
                     font-size: mixinsfunc.pixels-rem(24);
                 }
             }
+        }
+        @media (max-width:280px) {
+            width: 80vw;
+        }
+        @media (min-width:763px) {
+            width: 40vw;
+        }
+        @media (min-width:1023px) {
+            width: 32vw;
         }
     }
 }

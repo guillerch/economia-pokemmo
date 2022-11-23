@@ -1,7 +1,28 @@
 {% extends 'layout.html' %}
 {% block head %}
-
+<title>Guias|Poke Asistente</title>
+<meta name="description" content="Poke Asistente | Guias actualizadas de pokemmo desde instalar, jugar, crianza, y bayas." />
+<!-- Adsense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1797727024125132"
+crossorigin="anonymous"></script>
 {% endblock head %}
 {% block content %}
-
+<main class="guide">
+    <h3 class="guide__title">Guias</h3>
+    <p class="guide__description">
+    Todas nuestras guias son actualizadas con videos para cada una de ellas.
+    </p>
+    <section class="guide__container">
+        {% for guide in guides %}
+        <div class="guide__item">
+            <img class="guide__item--img" src="{{guide.img.url}}" />
+            <h4 class="guide__item--title">{{guide.name}}</h4>
+            <p class="guide__item--description">{{guide.description}}</p>
+            <button class="guide__item--button">
+                <a class="guide__item--button-a" href="{{guide.video}}">ir al video</a>
+            </button>
+        </div>
+        {% endfor %}
+    </section>
+</main>
 {% endblock content %}

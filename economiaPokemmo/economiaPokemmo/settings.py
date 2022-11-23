@@ -43,8 +43,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     #apps locales
-    'apps.crianza.apps.CrianzaConfig',
-    'apps.bayas'
+    'apps.crianza',
+    'apps.bayas',
+    'apps.guias',
 ]
 
 MIDDLEWARE = [
