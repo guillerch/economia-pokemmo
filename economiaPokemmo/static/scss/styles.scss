@@ -12,3 +12,30 @@
 .high-light{
     font-weight: bold;
 }
+.banner {
+    margin-top: mixinsfunc.pixels-rem(58);
+    width: mixinsfunc.pixels-rem(350);
+    height: mixinsfunc.pixels-rem(90);
+    
+    @media (max-width:280px){
+        width: mixinsfunc.pixels-rem(268);
+        height: mixinsfunc.pixels-rem(90);
+    }
+
+    @media (min-width:764px) {
+        margin-top: mixinsfunc.pixels-rem(80);
+        width: mixinsfunc.pixels-rem(468);
+        height: mixinsfunc.pixels-rem(90);
+        align-items: center;
+    }
+
+    @media (min-width:1023px) {
+        margin-top: mixinsfunc.pixels-rem(52);
+        margin-bottom: mixinsfunc.pixels-rem(40);
+        width: mixinsfunc.pixels-rem(468);
+        height: mixinsfunc.pixels-rem(60);
+    }
+    @media (min-width:1100px){
+        margin-top: mixinsfunc.pixels-rem(72);
+    }
+}

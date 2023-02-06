@@ -56,11 +56,6 @@ body {
   text-align: center;
   width: 100vw;
 }
-@media (min-width: 1024px) {
-  body {
-    width: 98vw;
-  }
-}
 
 .desk-menu {
   display: flex;
@@ -227,12 +222,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 3rem;
-}
-@media (min-width: 764px) {
-  .breed {
-    margin-top: 5.5rem;
-  }
+  flex-direction: column;
 }
 .breed__container {
   display: flex;
@@ -243,8 +233,7 @@ body {
   border: 1px solid whitesmoke;
   border-radius: 4px;
   flex-direction: column;
-  margin-top: 1rem;
-  width: 60vw;
+  width: 96vw;
   padding-bottom: 1.25rem;
 }
 .breed__container--title {
@@ -252,12 +241,14 @@ body {
   font-size: 1.5rem;
   font-weight: bold;
   padding-bottom: 0.5rem;
-  padding: 0.75rem;
+  font-size: 1.25rem;
+  padding: 0.625rem;
 }
 .breed__container--description {
   color: #568c8f;
   font-size: 1.25rem;
   padding-bottom: 0.5rem;
+  font-size: 1.125rem;
 }
 @media (max-width: 280px) {
   .breed__container {
@@ -302,7 +293,7 @@ body {
 .breed__form--label {
   color: #568c8f;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 0.875rem;
   padding-bottom: 0.5rem;
 }
 .breed__form--input {
@@ -310,7 +301,7 @@ body {
   border-radius: 4px;
   margin-bottom: 0.5rem;
   width: 16vw;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
 }
 .breed__form--select {
   color: #568c8f;
@@ -325,21 +316,21 @@ body {
   background-color: whitesmoke;
   color: #568c8f;
   font-size: 0.875rem;
-  margin-top: 1.75rem;
+  margin-top: 1.5rem;
 }
 @media (max-width: 280px) {
   .breed__form--label {
-    font-size: 1rem;
+    font-size: 0.75rem;
   }
   .breed__form--input {
-    font-size: 0.75rem;
+    font-size: 0.625rem;
     width: 20vw;
   }
   .breed__form--button {
-    font-size: 0.75rem;
+    font-size: 0.625rem;
   }
   .breed__form--result {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 }
 @media (min-width: 764px) {
@@ -840,6 +831,39 @@ body {
 
 .high-light {
   font-weight: bold;
+}
+
+.banner {
+  margin-top: 3.625rem;
+  width: 21.875rem;
+  height: 5.625rem;
+}
+@media (max-width: 280px) {
+  .banner {
+    width: 16.75rem;
+    height: 5.625rem;
+  }
+}
+@media (min-width: 764px) {
+  .banner {
+    margin-top: 5rem;
+    width: 29.25rem;
+    height: 5.625rem;
+    align-items: center;
+  }
+}
+@media (min-width: 1023px) {
+  .banner {
+    margin-top: 3.25rem;
+    margin-bottom: 2.5rem;
+    width: 29.25rem;
+    height: 3.75rem;
+  }
+}
+@media (min-width: 1100px) {
+  .banner {
+    margin-top: 4.5rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

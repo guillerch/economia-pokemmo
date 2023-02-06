@@ -3,26 +3,24 @@
 
 .breed{
     @include mixinsfunc.flexbox(center);
-    margin-top: mixinsfunc.pixels-rem(48);
-    @media (min-width:764px) {
-        margin-top: mixinsfunc.pixels-rem(88);
-    }
+    flex-direction: column;
 
     &__container{
         @include mixinsfunc.flexbox(center);
         justify-content: flex-start;
         @include mixinsfunc.container;
         flex-direction: column;
-        margin-top: mixinsfunc.pixels-rem(16);
-        width: 60vw;
+        width: 96vw;
         padding-bottom: mixinsfunc.pixels-rem(20);
 
         &--title{
             @include mixinsfunc.title;
-            padding: mixinsfunc.pixels-rem(12);
+            font-size: mixinsfunc.pixels-rem(20);
+            padding: mixinsfunc.pixels-rem(10);
         }
         &--description{
             @include mixinsfunc.description;
+            font-size: mixinsfunc.pixels-rem(18);
         }
         @media (max-width:280px) {
             width: 100vw;
@@ -61,7 +59,7 @@
         &--label{
             color: vars.$dark-blue;
             font-weight: bold;
-            font-size: mixinsfunc.pixels-rem(16);
+            font-size: mixinsfunc.pixels-rem(14);
             padding-bottom: mixinsfunc.pixels-rem(8);
         }
         &--input{
@@ -69,7 +67,7 @@
             border-radius: 4px;
             margin-bottom: mixinsfunc.pixels-rem(8);
             width: 16vw;
-            font-size: mixinsfunc.pixels-rem(14);
+            font-size: mixinsfunc.pixels-rem(12);
 
         }
         &--select{
@@ -85,21 +83,21 @@
             background-color: vars.$white;
             color: vars.$dark-blue;
             font-size: mixinsfunc.pixels-rem(14);
-            margin-top: mixinsfunc.pixels-rem(28);
+            margin-top: mixinsfunc.pixels-rem(24);
         }
         @media (max-width:280px) {
             &--label{
-                font-size: mixinsfunc.pixels-rem(16);
+                font-size: mixinsfunc.pixels-rem(12);
             }
             &--input{
-                font-size: mixinsfunc.pixels-rem(12);
+                font-size: mixinsfunc.pixels-rem(10);
                 width: 20vw;
             }
             &--button{
-                font-size: mixinsfunc.pixels-rem(12);
+                font-size: mixinsfunc.pixels-rem(10);
             }
             &--result{
-                font-size: mixinsfunc.pixels-rem(16);
+                font-size: mixinsfunc.pixels-rem(14);
             }
         }
         @media (min-width:764px) {
