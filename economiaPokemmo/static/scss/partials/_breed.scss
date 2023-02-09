@@ -12,6 +12,7 @@
         flex-direction: column;
         width: 96vw;
         padding-bottom: mixinsfunc.pixels-rem(20);
+        margin-top: mixinsfunc.pixels-rem(88);
 
         &--title{
             @include mixinsfunc.title;
@@ -37,7 +38,6 @@
         }
         @media (min-width:1023px) {
             width: 30vw;
-            margin-top: mixinsfunc.pixels-rem(-30);
             margin-bottom: mixinsfunc.pixels-rem(120);
 
             &--title{
@@ -46,9 +46,6 @@
             &--description{
                 font-size: mixinsfunc.pixels-rem(18);
             }
-        }
-        @media (min-width:1279px){
-            margin-top: mixinsfunc.pixels-rem(20);
         }
     }
 

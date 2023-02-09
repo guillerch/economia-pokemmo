@@ -5,6 +5,7 @@
     align-items: center;
     margin-top: mixinsfunc.pixels-rem(88);
     margin-bottom: mixinsfunc.pixels-rem(130);
+    padding-top: mixinsfunc.pixels-rem(10);
     padding-bottom: mixinsfunc.pixels-rem(12);
     color: vars.$dark-blue;
     background-color: vars.$transparent;
@@ -17,5 +18,11 @@
     &__title{
         @include mixinsfunc.title;
 
+    }
+    &__section{
+        padding: mixinsfunc.pixels-rem(10);
+        &--title{
+            font-weight: bold;
+        }
     }
 }
