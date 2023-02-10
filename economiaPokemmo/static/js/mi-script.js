@@ -63,5 +63,6 @@ function calculo() {
   pBall.innerText = precioTotalPokebolas;
   pTotal.innerText = total
 };
+
 /*Acciones*/
 btn.addEventListener('click',calculo)
