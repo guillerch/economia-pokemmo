@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from .models import Baya
+from rest_framework import viewsets
+from .serializers import BayaSerializer
 # Create your views here.
 
 def bayas(request):
@@ -10,3 +12,7 @@ def bayas(request):
         'tiempos':times
         }
     return render(request,'bayas.html',context)
+
+class BayaViewSet(viewsets.ModelViewSet):
+    queryset = Baya.objects.all()
+    serializer_class = BayaSerializer

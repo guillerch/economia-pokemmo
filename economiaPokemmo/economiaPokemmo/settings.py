@@ -30,8 +30,8 @@ if DEBUG != True:
     CSRF_TRUSTED_ORIGINS=['https://*.pokeasistente.ga']
     ALLOWED_HOSTS = ['pokeasistente.ga','www.pokeasistente.ga']
 else:
-    CSRF_TRUSTED_ORIGINS=['https://*.localhost','https://*.pokeasistente.ga']
-    ALLOWED_HOSTS = ['localhost','www.localhost','pokeasistente.ga','www.pokeasistente.ga']
+    CSRF_TRUSTED_ORIGINS=['https://*.localhost','https://*.pokeasistente.ga','https://*.127.0.0.1']
+    ALLOWED_HOSTS = ['localhost','www.localhost','pokeasistente.ga','www.pokeasistente.ga','127.0.0.1']
 
 # Application definition
 
@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #apps terceros
+    'rest_framework',
+    'corsheaders',
     #apps locales
     'apps.crianza',
     'apps.bayas',
@@ -56,7 +59,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
+
+CORS_ALLOW_ALL_ORIGINS = True
+
 
 ROOT_URLCONF = 'economiaPokemmo.urls'
 
@@ -140,7 +147,7 @@ STATIC_URL = '/static/'
 if DEBUG:
         STATICFILES_DIRS = [
             os.path.join(BASE_DIR, 'static')
-       ]
+    ]
 else:
     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
