@@ -4,6 +4,7 @@ from rest_framework import routers
 from .views import BayaViewSet
 
 router = routers.DefaultRouter()
+
 router.register(r'api/bayapokemmo123456', BayaViewSet)
 
 urlpatterns = [

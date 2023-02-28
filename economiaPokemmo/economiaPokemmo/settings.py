@@ -30,8 +30,10 @@ if DEBUG != True:
     CSRF_TRUSTED_ORIGINS=['https://*.147.182.183.116']
     ALLOWED_HOSTS = ['147.182.183.116','147.182.183.116:8001']
 else:
+
     CSRF_TRUSTED_ORIGINS=['https://*.localhost','https://*.147.182.183.116']
     ALLOWED_HOSTS = ['localhost','www.localhost','147.182.183.116','147.182.183.116:8000']
+
 
 # Application definition
 
