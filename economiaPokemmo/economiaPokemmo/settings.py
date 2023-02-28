@@ -30,14 +30,9 @@ if DEBUG != True:
     CSRF_TRUSTED_ORIGINS=['https://*.msgmanager.tk']
     ALLOWED_HOSTS = ['msgmanager.tk','www.msgmanager.tk']
 else:
-<<<<<<< HEAD
     CSRF_TRUSTED_ORIGINS=['https://*.localhost','https://*.msgmanager.tk']
     ALLOWED_HOSTS = ['localhost','www.localhost','msgmanager.tk','www.msgmanager.tk']
-=======
 
-    CSRF_TRUSTED_ORIGINS=['https://*.localhost','https://*.147.182.183.116']
-    ALLOWED_HOSTS = ['localhost','www.localhost','147.182.183.116','147.182.183.116:8000']
->>>>>>> bd41f9b99a2b4a647b88a8afa6d74db17b62ad0c
 
 
 # Application definition
