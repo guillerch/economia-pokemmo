@@ -27,11 +27,11 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG',default=False,cast=bool)
 if DEBUG != True:
-    CSRF_TRUSTED_ORIGINS=['https://*.pokeasistente.ga']
-    ALLOWED_HOSTS = ['pokeasistente.ga','www.pokeasistente.ga']
+    CSRF_TRUSTED_ORIGINS=['https://*.147.182.183.116']
+    ALLOWED_HOSTS = ['147.182.183.116','147.182.183.116:8001']
 else:
-    CSRF_TRUSTED_ORIGINS=['https://*.localhost','https://*.pokeasistente.ga']
-    ALLOWED_HOSTS = ['localhost','www.localhost','pokeasistente.ga','www.pokeasistente.ga']
+    CSRF_TRUSTED_ORIGINS=['https://*.localhost','https://*.147.182.183.116']
+    ALLOWED_HOSTS = ['localhost','www.localhost','147.182.183.116','147.182.183.116:8000']
 
 # Application definition
 
