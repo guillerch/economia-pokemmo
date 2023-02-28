@@ -30,8 +30,8 @@ if DEBUG != True:
     CSRF_TRUSTED_ORIGINS=['https://*.pokeasistente.ga']
     ALLOWED_HOSTS = ['pokeasistente.ga','www.pokeasistente.ga']
 else:
-    CSRF_TRUSTED_ORIGINS=['https://*.localhost','https://*.pokeasistente.ga','https://*.127.0.0.1']
-    ALLOWED_HOSTS = ['localhost','www.localhost','pokeasistente.ga','www.pokeasistente.ga','127.0.0.1']
+    CSRF_TRUSTED_ORIGINS=['https://*.localhost','https://*.pokeasistente.ga']
+    ALLOWED_HOSTS = ['localhost','www.localhost','pokeasistente.ga','www.pokeasistente.ga']
 
 # Application definition
 

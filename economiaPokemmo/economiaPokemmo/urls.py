@@ -18,10 +18,10 @@ from django.urls import path,include
 from django.conf import settings
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('apps.crianza.urls')),
+    path('admin-pokeasistente/', admin.site.urls),
+    # path('', include('apps.crianza.urls')),
     path('', include('apps.bayas.urls')),
-    path('', include('apps.guias.urls')),
+    # path('', include('apps.guias.urls')),
 ]
 
 # ruta imagenes
