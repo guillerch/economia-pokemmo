@@ -19,7 +19,7 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin-pokeasistente/', admin.site.urls),
-    # path('', include('apps.crianza.urls')),
+    path('', include('apps.blog.urls')),
     path('', include('apps.bayas.urls')),
     # path('', include('apps.guias.urls')),
 ]

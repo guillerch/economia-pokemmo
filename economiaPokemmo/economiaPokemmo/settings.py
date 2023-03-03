@@ -48,9 +48,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     #apps locales
-    'apps.crianza',
     'apps.bayas',
     'apps.guias',
+    'apps.blog',
 ]
 
 MIDDLEWARE = [
