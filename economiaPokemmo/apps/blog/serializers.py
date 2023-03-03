@@ -18,7 +18,7 @@ class PointSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Point
-        fields = ('id', 'post', 'title', 'content', 'order')
+        fields = '__all__'
 
 class PostSerializer(serializers.ModelSerializer):
     points = PointSerializer(many=True, read_only=True)
