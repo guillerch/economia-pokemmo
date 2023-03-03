@@ -18,11 +18,11 @@ class PointSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Point
-        fields = ('id', 'post', 'title', 'content', 'order', 'paragraphs')
+        fields = ('id', 'post', 'title', 'content', 'order')
 
 class PostSerializer(serializers.ModelSerializer):
     points = PointSerializer(many=True, read_only=True)
 
     class Meta:
         model = Post
-        fields = ('id', 'title', 'intro', 'thumbnail', 'header_image', 'conclusion', 'created_at', 'updated_at', 'points', 'categories')
+        fields = ('id', 'title', 'intro', 'thumbnail', 'header_image', 'conclusion', 'points', 'categories')
