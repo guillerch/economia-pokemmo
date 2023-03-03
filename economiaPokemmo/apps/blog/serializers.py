@@ -6,12 +6,12 @@ from .models import Category,Post, Point, Paragraph
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
-        fields = ('id','name','slug')
+        fields = '__all__'
 
 class ParagraphSerializer(serializers.ModelSerializer):
     class Meta:
         model = Paragraph
-        fields = ('id', 'post', 'text', 'order')
+        fields = '__all__'
 
 class PointSerializer(serializers.ModelSerializer):
     paragraphs = ParagraphSerializer(many=True, read_only=True)
@@ -25,4 +25,4 @@ class PostSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Post
-        fields = ('id', 'title', 'intro', 'thumbnail', 'header_image', 'conclusion', 'points', 'categories')
+        fields = '__all__'
