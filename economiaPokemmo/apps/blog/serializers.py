@@ -22,6 +22,7 @@ class PointSerializer(serializers.ModelSerializer):
 
 class PostSerializer(serializers.ModelSerializer):
     points = PointSerializer(many=True, read_only=True)
+    paragraphs = ParagraphSerializer(many=True, read_only=True)
 
     class Meta:
         model = Post
